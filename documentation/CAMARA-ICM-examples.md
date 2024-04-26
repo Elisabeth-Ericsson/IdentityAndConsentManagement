@@ -13,6 +13,16 @@ The scope `openid` is needed only in the request to specify that the request is 
 
 ---
 
+---
+**Note**
+
+This document used the response of the token-introspection endpoint as per RFC7662 to describe an access token.
+This document does not say that the access token is self-contained or not.
+
+---
+
+
+
 ### Requesting one purpose, two scopes of the same API
 
 #### OIDC authorization code flow
@@ -131,7 +141,7 @@ Host: server.example.com
 
 #### Option 2 [RFC7662](https://datatracker.ietf.org/doc/html/rfc7662) response on introspecting an access token issued by the above requests
 
-**Note**: that the value of the technical-scope is an array of `purpose`, so one technical-scope can have different `purpose` values.
+**Note**: The value of the `technical-scope` is an array of `purpose`, so one `technical-scope` can have different `purpose` values.
 
 ```
 {
